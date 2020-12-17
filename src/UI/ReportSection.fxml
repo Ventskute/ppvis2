@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="body"
+            stylesheets="@main.css">
+    <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" spacing="10">
+        <StackPane styleClass="header">
+            <fx:include source="MenuButton.fxml" />
+            <Label fx:id="headerText" StackPane.alignment="CENTER_RIGHT">FAVOURITE ROUTES</Label>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+        </StackPane>
+
+        <VBox spacing="10" >
+            <TextField fx:id="routeFrom" promptText="STREET" />
+            <Label text="Type of problem" />
+            <ChoiceBox>
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Road Crash" />
+                        <String fx:value="Ice" />
+                        <String fx:value="Road Bump" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Separator prefWidth="200.0" />
+            <Label text="Road Lane" />
+            <ChoiceBox>
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1" />
+                        <String fx:value="2" />
+                        <String fx:value="3" />
+                        <String fx:value="4" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <padding>
+                <Insets right="20" bottom="20" left="20" />
+            </padding>
+        </VBox>
+    </VBox>
+    <Button AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" styleClass="full-width-button" text="SEND">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import com.sun.javafx.charts.Legend?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="body"
+            stylesheets="@main.css">
+    <VBox spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <StackPane styleClass="header">
+            <fx:include source="MenuButton.fxml" />
+            <Label fx:id="headerText" StackPane.alignment="CENTER_RIGHT">SCHEDULE</Label>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+        </StackPane>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="Route Schedule">
+              <content>
+                  <AnchorPane>
+                      <ListView prefWidth="120">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Bus 1" />
+                                  <String fx:value="Bus 2" />
+                                  <String fx:value="Bus 3" />
+                                  <String fx:value="Bus 4" />
+                              </FXCollections>
+                          </items>
+                      </ListView>
+                      <ListView layoutX="120" prefWidth="120">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Tram 1" />
+                                  <String fx:value="Tram 2" />
+                                  <String fx:value="Tram 3" />
+                                  <String fx:value="Tram 4" />
+                              </FXCollections>
+                          </items>
+                      </ListView>
+                      <ListView layoutX="240" prefWidth="120">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Trolleybus 1" />
+                                  <String fx:value="Trolleybus 2" />
+                                  <String fx:value="Trolleybus 3" />
+                                  <String fx:value="Trolleybus 4" />
+                              </FXCollections>
+                          </items>
+                      </ListView>
+                      <ListView layoutX="360" prefWidth="120">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="RTaxi 1024" />
+                                  <String fx:value="RTaxi 1096" />
+                                  <String fx:value="RTaxi 1080" />
+                                  <String fx:value="RTaxi 1150" />
+                              </FXCollections>
+                          </items>
+                      </ListView>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Stop Schedule">
+              <content>
+                <AnchorPane>
+                    <ListView prefWidth="480">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Yakiba Kolasa sqr." />
+                                <String fx:value="Oktyabrskaya sqr." />
+                            </FXCollections>
+                        </items>
+                    </ListView>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+    </VBox>
+</AnchorPane>

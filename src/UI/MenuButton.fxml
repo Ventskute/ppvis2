@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Button xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id="menuButton"
+        styleClass="menu-button"
+        fx:controller="controllers.ShowMenu"
+        onAction="#execute"
+        minWidth="30"
+        StackPane.alignment="TOP_LEFT">
+    <cursor>
+        <Cursor fx:constant="HAND" />
+    </cursor>
+</Button>

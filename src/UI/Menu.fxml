@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="body" stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CommandSelectSection">
+    <VBox alignment="CENTER" spacing="10" styleClass="menu" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+            <Button onAction="#execute" text="Build a route">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button onAction="#execute" text="Schedule">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button onAction="#execute" text="Favourite routes">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button onAction="#execute" text="Report a problem">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+    </VBox>
+</AnchorPane>

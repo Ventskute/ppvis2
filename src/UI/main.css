@@ -1,0 +1,63 @@
+#body {
+    -fx-background-color: #efefef;
+    -fx-font-size: 16px;
+}
+
+.header {
+    -fx-background-color: #333;
+}
+
+#headerText {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 900;
+}
+
+#menuButton {
+    -fx-background-image: url('/assets/menu.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#menuButton:hover {
+    -fx-background-image: url('/assets/menu2.png');
+}
+
+#menuButton.opened {
+    -fx-rotate: 90deg;
+}
+
+.full-width-button {
+    -fx-background-color: #5096FF;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 900;
+}
+
+.full-width-button:hover {
+    -fx-background-color: #61A7FF;
+}
+
+.menu {
+    -fx-background-color: #333333;
+}
+
+.menu .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+.card:hover {
+    -fx-background-color: #efefef;
+}
+
+.card-title {
+    -fx-font-weight: 900;
+}
