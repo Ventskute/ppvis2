@@ -8,7 +8,8 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:id="body"
-            stylesheets="@main.css">
+            stylesheets="@main.css"
+            fx:controller="controllers.BuildRoute">
     <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" spacing="10">
         <StackPane styleClass="header">
             <fx:include source="MenuButton.fxml" />
@@ -18,23 +19,23 @@
             </padding>
         </StackPane>
 
-        <VBox spacing="10" >
+        <VBox spacing="10" fx:id="data">
             <TextField fx:id="routeFrom" promptText="FROM" />
             <TextField fx:id="routeTo" promptText="TO" />
             <Separator prefWidth="200.0" />
             <Label text="Filter" />
-            <CheckBox selected="true" text="Bus" />
-            <CheckBox selected="true" text="Trolleybus" />
-            <CheckBox selected="true" text="Tram" />
-            <CheckBox selected="true" text="Metropolitan" />
-            <CheckBox selected="true" text="Routed Taxicab" />
+            <CheckBox selected="true" fx:id="bus" text="Bus" />
+            <CheckBox selected="true" fx:id="trolley" text="Trolleybus" />
+            <CheckBox selected="true" fx:id="tram" text="Tram" />
+            <CheckBox selected="true" fx:id="metro" text="Metropolitan" />
+            <CheckBox selected="true" fx:id="rtaxi" text="Routed Taxicab" />
 
             <padding>
                 <Insets right="20" bottom="20" left="20" />
             </padding>
         </VBox>
     </VBox>
-    <Button AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" styleClass="full-width-button" text="BUILD">
+    <Button AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" styleClass="full-width-button" text="BUILD" onAction="#execute">
         <cursor>
             <Cursor fx:constant="HAND" />
         </cursor>

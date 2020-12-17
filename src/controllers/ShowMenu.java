@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ShowMenu {
+    String commandName = "ShowMenu";
+
     @FXML
     Button menuButton;
 
@@ -20,5 +22,9 @@ public class ShowMenu {
         FXMLLoader routeSection = new FXMLLoader(getClass().getResource("/UI/Menu.fxml"));
 //        primaryStage.setScene(new Scene(routeSection.load(), 480, 800));
         primaryStage.getScene().setRoot(routeSection.load());
+    }
+
+    public String getCommandName() {
+        return this.commandName;
     }
 }

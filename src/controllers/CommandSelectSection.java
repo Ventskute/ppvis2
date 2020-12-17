@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CommandSelectSection {
+    String commandName = "CommandSelectSection";
 
     @FXML
     AnchorPane body;
@@ -42,5 +43,9 @@ public class CommandSelectSection {
 
         FXMLLoader sectionLoader = new FXMLLoader(getClass().getResource("/UI/" + section + ".fxml"));
         primaryStage.setScene(new Scene(sectionLoader.load(), 480, 800));
+    }
+
+    public String getCommandName() {
+        return this.commandName;
     }
 }

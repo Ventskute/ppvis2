@@ -16,9 +16,16 @@ import java.io.IOException;
 import java.util.List;
 
 public class TransportHelper extends Application {
+    private static RouteBuilderImpl routeBuilder;
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setTitle("Transport Helper");
+
+        routeBuilder = new RouteBuilderImpl();
+        ScheduleViewerImpl scheduleViewer = new ScheduleViewerImpl();
+        ProblemReporterImpl problemReporter = new ProblemReporterImpl();
+        FavouritesViewerImpl favouritesViewer = new FavouritesViewerImpl();
 
         BuildRoute buildRoute = new BuildRoute();
         CommandSelectRouteForBuilding commandSelectRoute = new CommandSelectRouteForBuilding();
@@ -30,11 +37,6 @@ public class TransportHelper extends Application {
         ShowStoppingPointSchedule showStoppingPointSchedule = new ShowStoppingPointSchedule();
         SubmitReportedProblem submitReportedProblem = new SubmitReportedProblem();
 
-        RouteBuilderImpl routeBuilder = new RouteBuilderImpl();
-        ScheduleViewerImpl scheduleViewer = new ScheduleViewerImpl();
-        ProblemReporterImpl problemReporter = new ProblemReporterImpl();
-        FavouritesViewerImpl favouritesViewer = new FavouritesViewerImpl();
-
         MainView mainView = new MainView(primaryStage);
 
         Parent root = mainView.showRouteSection();
@@ -45,5 +47,9 @@ public class TransportHelper extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
+    }
+
+    public static RouteBuilderImpl getRouteBuilder() {
+        return routeBuilder;
     }
 }

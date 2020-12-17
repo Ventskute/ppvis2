@@ -6,7 +6,7 @@ import data.StoppingPointSchedule;
 import java.util.List;
 
 public interface ScheduleViewer {
-    public void selectScheduleType();
+    public void selectScheduleType(String type);
     public void viewRoutesList(List<RouteSchedule> routeSchedule);
     public void viewStoppingPointsList(List<StoppingPointSchedule> stoppingPointSchedule);
     public void viewRouteSchedule(RouteSchedule routeSchedule);

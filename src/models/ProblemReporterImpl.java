@@ -3,18 +3,20 @@ package models;
 import models.interfaces.ProblemReporter;
 
 public class ProblemReporterImpl implements ProblemReporter {
+    String problemType;
+
     @Override
-    public String selectProblemType() {
-        return null;
+    public void selectProblemType(String problemType){
+        this.problemType = problemType;
     }
 
     @Override
-    public int selectRoadLane() {
-        return 0;
+    public int selectRoadLane(int lane) {
+        return lane;
     }
 
     @Override
-    public void reportProblem() {
+    public void reportProblem(String road,String type, String problem, int id){
 
     }
 }
